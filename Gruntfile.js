@@ -8,7 +8,9 @@ module.exports = function(grunt){
         username: '{OrgUsername}',
         password: '{OrgPassword + OrgSecurityToken}'
     };
-
+    /**
+     * Configure your skuid-pull task
+     */
     var skuidPullConfig = {
         'options': clientOptions,
         'dev':{
@@ -20,7 +22,9 @@ module.exports = function(grunt){
             }
         }
     };
-
+    /**
+     * Configure your skuid-push task
+     */
     var skuidPushConfig = {
         'options': clientOptions,
         'dev': {
@@ -30,7 +34,9 @@ module.exports = function(grunt){
             }
         }
     };
-
+    /**
+     * Configure your skuid-page-pack task
+     */
     var pagePackConfig = {
         'options': clientOptions,
         'default':{
