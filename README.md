@@ -23,7 +23,7 @@ Documentation: [skuid-grunt](https://bitbucket.org/skuid/skuid-grunt)
 * Clone this project
 
 ```bash
-$ git clone {this-repo-url}
+$ git clone https://bitbucket.org/skuid/skuid-grunt-starter.git
 ```
 
 * Navigate to `skuid-grunt-starter`
