@@ -4,6 +4,7 @@ Template project for getting started with [skuid-grunt](https://bitbucket.org/sk
 
 Documentation: [skuid-grunt](https://bitbucket.org/skuid/skuid-grunt)
 
+## Description
 `skuid-grunt` is a GruntJS plugin for 'pushing' and 'pulling' Skuid Pages to and from a Salesforce org with Skuid installed. It is a great way to integrate Skuid development into the rest of your Salesforce development workflow. You can use `skuid-grunt` in any version control system as GruntJS is just as task runner and `skuid-grunt` provides a set of tasks that GruntJS can use.
 
 ## Prerequisites
