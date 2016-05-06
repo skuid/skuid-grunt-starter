@@ -1,12 +1,12 @@
 module.exports = function(grunt){
 
     var clientOptions = {
-        'clientId':'{ClientId}',
-        'clientSecret':'{ClientSecret}',
+        'clientId': process.env.CON_APP_CLIENT_ID,
+        'clientSecret': process.env.CON_APP_CLIENT_SECRET,
     };
     var orgCredsDev = {
-        username: '{OrgUsername}',
-        password: '{OrgPassword + OrgSecurityToken}'
+        username: process.env.SKUID_GRUNT_USERNAME,
+        password: process.env.SKUID_GRUNT_PASSWORD //this value is the users password + security token
     };
     /**
      * Configure your skuid-pull task

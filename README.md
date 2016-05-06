@@ -47,19 +47,29 @@ $ git commit -m "Project scaffolding" # commit new files
 $ npm install
 ```
 
-* In Gruntfile.js, edit the the following areas
-	* `{ClientId}` = Connected App Client Id
-	* `{ClientSecret}` = Connected App Client Secret
-	* `{OrgUsername}` = The username of the Salesforce org you want to connect to
-	* `{OrgPassword + OrgSecurityToken}` = The password + security token of the Salesforce org you want to connect to
+* Setup environment variables that the Gruntfile can use for it's credentials. Run the following commands in your current terminal session OR add them to a file like `~/.bash_profile` on OSX or `~/.bashrc` on Linux so that they are always available in your terminal sessions.
 
-*A more advanced way to do this would be to define each item as an environment variable, and reference that in Gruntfile.js*
+```bash
+# This will vary based on your system (Windows, OSX, Linux)
+$ export CON_APP_CLIENT_ID={ClientId} # replace {ClientId} with your Connected App client_id
+$ export CON_APP_CLIENT_SECRET={ClientSecret} # replace {ClientSecret} with your Connected App client_secret
+$ export SKUID_GRUNT_USERNAME={OrgUsername} # replace {OrgUsername} with the username of the org you wish to connect to
+$ export SKUID_GRUNT_PASSWORD={OrgPassword + OrgSecurityToken} # replace {OrgPassword + OrgSecurityToken} with the password and security token for the above user
+```
 
-* Pull your first set of Skuid Pages
+
+* Pull your first set of Skuid Pages	
 
 ```bash
 $ grunt pull-pages
 ```
+
+## Why use environment variables?
+Using environemnt variables for credential configuration serves multiple purposes:
+
+1. If you choose to store your Skuid Pages in a publicly accessible repository (GitHub, Bitbucket, etc), it is a secure way to ensure that you never commit any secure credtials to your repository.
+2. Your Skuid Page repo will be portable, allowing multiple developers or automation tools to use the same repo to interact with different environments.
+
 
 
 ## Creating your own repository (optional)
@@ -73,6 +83,9 @@ Once the repository has been created, copy the repository url and follow the ste
 $ git remote add origin {repo-remote-url}
 $ git push -u origin master
 ```
+
+
+
 
 
 
